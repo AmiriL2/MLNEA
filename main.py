@@ -57,7 +57,13 @@ def index():
 @app.route('/feedpage')
 @flask_login.login_required
 def homepage():
-    return render_template('/homepage.html.jinja')
+    cursor = connect.cursor()
+    sql = "SELECT * FROM `Posts` JOIN `Users` on Posts.User_ID = User_ID ORDER BY `Timestamp` "
+    cursor.execute(sql)
+    posts = cursor.fetchall()
+    cursor.close()
+
+    return render_template('/homepage.html.jinja', Posts=posts)
 
 @app.route('/sign-up', methods=['GET','POST'])
 def signup():

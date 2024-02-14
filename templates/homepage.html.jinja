@@ -1,328 +1,607 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-    <title>Anasayfa / X</title>
-    <link rel="stylesheet" href="/static/homepage.css">
-    <link rel="shortcut icon" href="/Photos/x-favion.png" type="image/x-icon">
-    <!--TAILWIND-->
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <div class="container"> <!--MAIN DIV-->
-        <!--LEFT LIST-->
-        <div class="navbar">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Linkedin</title>
 
-            <div class="main-logo">
-                <img src="/Photos/x-favion.png" alt="#">
-            </div>
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.ico" />
+        <link rel="stylesheet" href="/static/homepage.css" />
 
-            <div class="slide-bar">
+        <script src="/static/script (3).js"></script>
+        <script src="https://kit.fontawesome.com/3055f91a99.js"></script>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header id="main-header">
+            <div>
+                <div>
+                    <img
+                        id="header-logo"
+                        src="/images/linkedin.png"
+                        alt="LinkedIn"
+                    />
+                    <img
+                        id="header-picture-menu"
+                        src="/images/picture.jpeg"
+                        alt="Profile picture"
+                    />
+                    <span id="header-picture-menu-bars">
+                        <span class="fas fa-bars"></span>
+                    </span>
 
-                <div class="home">
-                    <img src="/Photos/SVG/home-1-svgrepo-com.svg" alt="#">
-                    <span>Anasayfa</span>
-                </div>
-    
-                <div class="explore">
-                    <img src="/Photos/SVG/explore-find-glass-svgrepo-com.svg" alt="#">
-                    <span>Keşfet</span>
-                </div>
-    
-                <div class="notification">
-                    <img src="/Photos/SVG/notification-13-svgrepo-com.svg" alt="#">
-                    <span>Bildirimler</span>
-                </div>
-                
-                <div class="messages">
-                    <img src="/Photos/SVG/envelope-svgrepo-com.svg" alt="#">
-                    <span>Mesajlar</span>
-                </div>
-    
-                <div class="list">
-                    <img src="/Photos/SVG/paper-svgrepo-com.svg" alt="#">
-                    <span>Listeler</span>
-                </div>
-    
-                <div class="checked">
-                    <img src="/Photos/SVG/checked-tick-svgrepo-com.svg" alt="#">
-                    <span>Onaylanmış</span>
-                </div>
-    
-                <div class="profile">
-                    <img src="/Photos/SVG/profile-round-1346-svgrepo-com.svg" alt="#">
-                    <span>Profil</span>
-                </div>
-    
-                <div class="more">
-                    <img src="/Photos/SVG/more-horizontal-circle-svgrepo-com.svg" alt="#">
-                    <span>Daha fazla</span>
-                </div>
-            </div>
-
-            <button>Gönder</button>
-            
-            <div class="feather-pen">
-                <img src="/Photos/SVG/feather-pen-svgrepo-com.svg" alt="#">
-            </div>
-
-            <div class="profile-section">
-                <img src="/Photos/profile-photo.png" alt="#">
-                <h2>Batuhan KARAHAN</h2>
-                <span>@karahan.dev</span>
-                <img src="/Photos/SVG/more-horizontal-svgrepo-com.svg" alt="#" class="more-svg">
-            </div>
-        </div>
-
-
-        <!--FIXED HOMEPAGE-->
-        <div class="fixed-home">
-            <h2>Anasayfa</h2> <br>
-            <div><span>Sana özel</span></div>
-            <div><span>Takip edilenler</span></div>
-        </div>
-
-        <!--TEXT ZONE-->
-        <div class="text-zone">
-            <img src="/Photos/profile-photo.png" alt="#" class="text-zone-photo">
-            <input type="text" name="#" id="#" placeholder="Neler oluyor?">
-            <div class="mini-logos">
-                <img src="/Photos/SVG/image-square-svgrepo-com.svg" alt="#">
-                <img src="/Photos/SVG/gif-svgrepo-com.svg" alt="#">
-                <img src="/Photos/SVG/list-check-svgrepo-com.svg" alt="#">
-                <img src="/Photos/SVG/smile-svgrepo-com.svg" alt="#">
-                <img src="/Photos/SVG/event-calender-date-note-svgrepo-com.svg" alt="#">
-                <img src="/Photos/SVG/location-pin-alt-1-svgrepo-com.svg" alt="#">
-            </div>
-            <button class="text-xone-button">Gönder</button>
-        </div>
-
-        <div class="right-side-bar">
-            
-            <div class="search-bar">
-                <input type="search" name="#" id="#" placeholder="Ara">
-            </div>
-
-            <!--CHECKED PROFILE-->
-
-            <div class="checked-profile">
-                <h2>Onaylanmış Hesap Sahibi Ol</h2>
-                <div>Yeni özelliklerden yararlanmak için abone ol.</div>
-                <button>Onaylanmış Hesap Sahibi Ol</button>
-            </div>
-
-            <!--AGENDA-->
-            <div class="agenda">
-                <h2>İlgini çekebilecek gündemler</h2>
-                <div class="tags">
-                    <h3>Türkiye tarihinde gündemde</h3>
-                    <span class="big-tags">#Lorem</span>
-                    <span id="posts-number">25,8 B posts</span>
-                    <img src="/Photos/SVG/more-horizontal-svgrepo-com.svg" alt="#">
-                </div>
-
-                <div class="tags">
-                    <h3>Türkiye tarihinde gündemde</h3>
-                    <span class="big-tags">#Lorem</span>
-                    <span id="posts-number">25,8 B posts</span>
-                    <img src="/Photos/SVG/more-horizontal-svgrepo-com.svg" alt="#">
-                </div>
-
-                <div class="tags">
-                    <h3>Türkiye tarihinde gündemde</h3>
-                    <span class="big-tags">#Lorem</span>
-                    <span id="posts-number">25,8 B posts</span>
-                    <img src="/Photos/SVG/more-horizontal-svgrepo-com.svg" alt="#">
-                </div>
-
-                <div class="tags">
-                    <h3>Türkiye tarihinde gündemde</h3>
-                    <span class="big-tags">#Lorem</span>
-                    <span id="posts-number">25,8 B posts</span>
-                    <img src="/Photos/SVG/more-horizontal-svgrepo-com.svg" alt="#">
-                </div>
-
-                <div class="tags">
-                    <h3>Türkiye tarihinde gündemde</h3>
-                    <span class="big-tags">#Lorem</span>
-                    <span id="posts-number">25,8 B posts</span>
-                    <img src="/Photos/SVG/more-horizontal-svgrepo-com.svg" alt="#">
-                </div>
-
-                <div class="tags">
-                    <h3>Türkiye tarihinde gündemde</h3>
-                    <span class="big-tags">#Lorem</span>
-                    <span id="posts-number">25,8 B posts</span>
-                    <img src="/Photos/SVG/more-horizontal-svgrepo-com.svg" alt="#">
-                </div>
-
-                <h4>Daha fazla göster</h4>
-            </div>
-
-            <!--FOLLOW-->
-            <div class="follow">
-                <h2>Kimi takip etmeli</h2>
-                <div class="profile-follow">
-                    <img src="/Photos/face-1.jpg" alt="#">
-                    <div class="personal-nick">
-                        <span>Elisa Bind</span>
-                        <span id="nick-name">@elissaabnd</span>
+                    <div>
+                        <input
+                            id="search"
+                            type="text"
+                            placeholder="       Search"
+                            onfocus="toggleSearchInput()"
+                            onblur="toggleSearchInput()"
+                        />
+                        <span id="search-icon" class="fas fa-search"></span>
+                        <span id="search-button" class="fas fa-search"></span>
                     </div>
-                    <button>Takip et</button>
+                    <span class="fas fa-comments"></span>
                 </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <div id="home" class="selected">
+                                <span class="fas fa-home"></span>
+                                <span class="nav-item-text">Home</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="fas fa-user-friends"></span>
+                                <span class="nav-item-text">My Network</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="fas fa-suitcase"></span>
+                                <span class="nav-item-text">Jobs</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="fas fa-envelope"></span>
+                                <span class="nav-item-text">Messaging</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="fas fa-bell"></span>
+                                <span class="nav-item-text">Notifications</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="right-border">
+                                <img
+                                    src="/images/picture.jpeg"
+                                    alt="Profile picture"
+                                />
 
-                <div class="profile-follow">
-                    <img src="/Photos/face-2.jpg" alt="#">
-                    <div class="personal-nick">
-                        <span>Lily Sully</span>
-                        <span id="nick-name">@lilsul_usa</span>
+                                <span class="nav-item-text">
+                                    Me<span class="fas fa-caret-down"> </span
+                                ></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="fas fa-th"></span>
+
+                                <span class="nav-item-text"
+                                    >Work<span class="fas fa-caret-down"> </span
+                                ></span>
+                            </div>
+                        </li>
+                        <li id="premium">
+                            <div>
+                                <a href="#">Try Premium Free for 1 Month</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- LOADING PAGE -->
+        <div id="loading-page">
+            <div>
+                <img src="/images/linkedin.png" alt="" />
+                <div id="dot-loader">
+                    <div class="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
-                    <button>Takip et</button>
                 </div>
-
-                <div class="profile-follow">
-                    <img src="/Photos/face-3.jpg" alt="#">
-                    <div class="personal-nick">
-                        <span>John Mox</span>
-                        <span id="nick-name">@chopper_la</span>
+            </div>
+        </div>
+        <!-- MAIN CONTAINER -->
+        <div class="container">
+            <!-- ADS -->
+            <section id="ads">
+                <div>
+                    <a>
+                        <span id="ad-title">Your project needs CI/CD. -</span>
+                        <span id="ad-subtitle"
+                            >Add the most popular GitHub integration and start
+                            building for free.
+                        </span>
+                    </a>
+                    <span id="ad">Ad </span>
+                </div>
+            </section>
+            <!-- LEFT ASIDE -->
+            <div id="left-aside-wrapper">
+                <aside id="left-aside">
+                    <div id="profile-card">
+                        <div id="background"></div>
+                        <div id="profile-info">
+                            <img
+                                src="/images/picture.jpeg"
+                                alt="Profile picture"
+                            />
+                            <strong id="profile-name"
+                                >Maurício Mendes Rossi</strong
+                            >
+                            <small>Front-End Developer</small>
+                        </div>
+                        <div id="profile-links">
+                            <a href="#">
+                                <span>
+                                    Who's viewed your profile
+                                </span>
+                                <span class="profile-number">
+                                    102
+                                </span>
+                            </a>
+                            <a href="#">
+                                <span>
+                                    Connections
+                                </span>
+                                <span class="profile-number">
+                                    452
+                                </span>
+                            </a>
+                        </div>
+                        <span>Grow your network</span>
+                        <a href="#">
+                            <span>Access exclusive tools & insights</span>
+                            <span id="profile-premium">
+                                <span id="profile-square">■</span> Try Premium
+                                Free for 1 Month</span
+                            >
+                        </a>
                     </div>
-                    <button>Takip et</button>
+                    <div id="profile-groups">
+                        <section>
+                            <header
+                                onmouseover="showProfileGroupIcon(this)"
+                                onmouseout="showProfileGroupIcon(this)"
+                            >
+                                <span>Recent</span>
+                                <span
+                                    class="fas fa-angle-up"
+                                    onclick="toggleProfileGroupList(this)"
+                                ></span>
+                            </header>
+                            <ul class="group-list">
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>React Developers</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-hashtag"></span>
+                                    <span>javascript</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-hashtag"></span>
+                                    <span>webdevelopment</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>Javascript Brasil</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>Dog Lovers</span>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <header
+                                onmouseover="showProfileGroupIcon(this)"
+                                onmouseout="showProfileGroupIcon(this)"
+                            >
+                                <span class="group-title">Groups</span>
+                                <span
+                                    class="fas fa-angle-up"
+                                    onclick="toggleProfileGroupList(this)"
+                                ></span>
+                            </header>
+                            <ul>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span id="aaaa">React Developers</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>Javascript Brasil</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>Dog Lovers</span>
+                                </li>
+                            </ul>
+                            <div class="group-list">
+                                <a href="#">See all</a>
+                            </div>
+                        </section>
+                        <section>
+                            <header
+                                onmouseover="showProfileGroupIcon(this)"
+                                onmouseout="showProfileGroupIcon(this)"
+                            >
+                                <span class="group-title">
+                                    Followed Hashtags</span
+                                >
+                                <span
+                                    class="fas fa-angle-up"
+                                    onclick="toggleProfileGroupList(this)"
+                                ></span>
+                            </header>
+                            <ul>
+                                <li>
+                                    <span class="fas fa-hashtag"></span>
+                                    <span>javascript</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-hashtag"></span>
+                                    <span>webdevelopment</span>
+                                </li>
+                            </ul>
+                            <a href="#">See all</a>
+                        </section>
+                        <a href="#">Discover more</a>
+                    </div>
+                </aside>
+            </div>
+            <!-- MAIN -->
+            <div id="main-wrapper">
+                <main id="main-section">
+                    <div id="share-box">
+                        <div id="button-box">
+                            <button id="btn-post">
+                                <span class="fas fa-edit"></span>
+                                <span id="btn-text">Start a post</span>
+                            </button>
+                            <button id="btn-picture">
+                                <span class="fas fa-camera"></span>
+                            </button>
+                            <button id="btn-video">
+                                <span class="fas fa-video"></span>
+                            </button>
+                            <button id="btn-document">
+                                <span class="fas fa-file"></span>
+                            </button>
+                        </div>
+                        <div id="link-box">
+                            <a href="#">Write an article</a>
+                            <span>on LinkedIn</span>
+                        </div>
+                    </div>
+                    <div id="feed-sort">
+                        <hr />
+                        <button>
+                            <span>Sort by:</span>
+                            <strong>Top</strong>
+                            <span class="fas fa-sort-down"></span>
+                        </button>
+                    </div>
+                    <article>
+                        {% for post in Posts %}
+                            <div id="post-author">
+                                <a href="#">
+                                    <div>
+                                        
+                                            <img src="" alt="" />
+                                        
+                                        <div>
+                                            <div>
+                                                <strong id="post-author-name">{{ post.username }}</strong>
+                                                <span><span>&nbsp;·&nbsp;</span>{{ post.username }}</span>
+                                            </div>
+                                            <span>Web Developer at Muse Software</span>
+                                            <span>{{ post.Timestamp }}</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div>
+                                    <span class="fas fa-circle"></span>
+                                    <span class="fas fa-circle"></span>
+                                    <span class="fas fa-circle"></span>
+                                </div>
+                            </div>
+
+                            <div id="post-data">
+                                <p>{{ post.Description }}</p>
+                                <p id="post-translation">
+                                    <button>See translation</button>
+                                </p>
+                                {% if post.Image %}
+                                <img src="{{ post.Image }}" alt="" />
+                                {% endif %}
+                            </div>
+
+                            <div id="post-interactions">
+                                <div id="interactions-amount">
+                                    <span id="like-icon" class="fas fa-thumbs-up fa-flip-horizontal"></span>
+                                    <span id="heart-icon" class="fas fa-heart"></span>
+                                    <span id="amount-info">{{ post.Like }} <span>&nbsp;·&nbsp;</span> 4 Comments</span>
+                                </div>
+                                <div id="interactions-btns">
+                                    <button>
+                                        <span class="far fa-thumbs-up fa-flip-horizontal"></span>
+                                        <span>Like</span>
+                                    </button>
+                                    <button>
+                                        <span class="far fa-comment-dots fa-flip-horizontal"></span>
+                                        <span>Comment</span>
+                                    </button>
+                                    <button>
+                                        <span class="far fa-share-square"></span>
+                                        <span>Share</span>
+                                    </button>
+                                </div>
+                            </div>
+                    </article>
+                    <article>
+                            <div id="post-author">
+                                <a href="#">
+                                    <div>
+                                        
+                                            <img src="" alt="" />
+                                        
+                                        <div>
+                                            <div>
+                                                <strong id="post-author-name">{{ post.User_ID }}</strong>
+                                                <span><span>&nbsp;·&nbsp;</span>1st</span>
+                                            </div>
+                                            <span>Web Developer at Muse Software</span>
+                                            <span>{{ post.Timestamp }}</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div>
+                                    <span class="fas fa-circle"></span>
+                                    <span class="fas fa-circle"></span>
+                                    <span class="fas fa-circle"></span>
+                                </div>
+                            </div>
+
+                            <div id="post-data">
+                                <p>{{ post.Description }}</p>
+                                <p id="post-translation">
+                                    <button>See translation</button>
+                                </p>
+                                <img src="{{ post.Image }}" alt="" />
+                            </div>
+
+                            <div id="post-interactions">
+                                <div id="interactions-amount">
+                                    <span id="like-icon" class="fas fa-thumbs-up fa-flip-horizontal"></span>
+                                    <span id="heart-icon" class="fas fa-heart"></span>
+                                    <span id="amount-info">{{ post.Like }} <span>&nbsp;·&nbsp;</span> 4 Comments</span>
+                                </div>
+                                <div id="interactions-btns">
+                                    <button>
+                                        <span class="far fa-thumbs-up fa-flip-horizontal"></span>
+                                        <span>Like</span>
+                                    </button>
+                                    <button>
+                                        <span class="far fa-comment-dots fa-flip-horizontal"></span>
+                                        <span>Comment</span>
+                                    </button>
+                                    <button>
+                                        <span class="far fa-share-square"></span>
+                                        <span>Share</span>
+                                    </button>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </article>
+                    <article>
+                        <div id="post-author">
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="/images/example-person3.jpeg"
+                                        alt=""
+                                    />
+                                    <div>
+                                        <div>
+                                            <strong id="post-author-name"
+                                                >Alec Fisher</strong
+                                            >
+                                            <span>
+                                                <span>&nbsp;·&nbsp;</span>
+                                                1st</span
+                                            >
+                                        </div>
+                                        <span>Web Designer at SL Systems</span>
+                                        <span>15h</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                            </div>
+                        </div>
+                        <div id="post-data">
+                            <p>
+                                You all could check
+                                <span>Maurício Rossi</span>'s Github, he has
+                                many academic projects using technologies such
+                                as Javascript, React, Redux, Sagas, HTML, CSS
+                                and others. Try clicking
+                                <a href="https://github.com/mrmauricio">here</a>
+                                ;)
+                            </p>
+                            <p id="post-translation">
+                                <button>See translation</button>
+                            </p>
+                            <img src="/images/example-post-image2.png" alt="" />
+                        </div>
+                        <div id="post-interactions">
+                            <div id="interactions-amount">
+                                <span
+                                    id="like-icon"
+                                    class="fas fa-thumbs-up fa-flip-horizontal"
+                                ></span>
+                                <span id="amount-info"
+                                    >18 <span>&nbsp;·&nbsp;</span> 6
+                                    Comments</span
+                                >
+                            </div>
+                            <div id="interactions-btns">
+                                <button>
+                                    <span
+                                        class="far fa-thumbs-up fa-flip-horizontal"
+                                    ></span>
+                                    <span>Like</span>
+                                </button>
+                                <button>
+                                    <span
+                                        class="far fa-comment-dots fa-flip-horizontal"
+                                    ></span>
+                                    <span>Comment</span>
+                                </button>
+                                <button>
+                                    <span class="far fa-share-square"></span>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </main>
+            </div>
+            <!-- RIGHT ASIDE -->
+            <aside id="right-aside">
+                <div id="rec-section">
+                    <div>
+                        <header>
+                            <span>Add to your feed</span>
+                            <span
+                                class="fas fa-info-circle"
+                                onmouseover="showRecommendationsInfo(this)"
+                                onmouseout="showRecommendationsInfo(this)"
+                            >
+                                <div id="float-info">
+                                    <span>
+                                        Follow things that interest you to
+                                        personalize your feed.
+                                    </span>
+                                    <a href="#">Learn more.</a>
+                                </div>
+                                <span>►</span>
+                                <div id="square"></div>
+                            </span>
+                        </header>
+                        <div>
+                            <div>
+                                <img src="/images/mongo.jpeg" alt="" />
+                                <div>
+                                    <strong>MongoDB</strong>
+                                    <small>Company - Computer Software</small>
+                                </div>
+                                <button>
+                                    <span class="fas fa-plus"></span>
+                                    <span>Follow</span>
+                                </button>
+                            </div>
+                            <div>
+                                <img src="/images/react.png" alt="" />
+                                <div>
+                                    <strong>#reactjs</strong>
+                                </div>
+                                <button>
+                                    <span class="fas fa-plus"></span>
+                                    <span>Follow</span>
+                                </button>
+                            </div>
+                            <div>
+                                <img src="/images/example-person.jpeg" alt="" />
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <small
+                                        >Entrepreneur and Marketing
+                                        Specialist</small
+                                    >
+                                </div>
+                                <button>
+                                    <span class="fas fa-plus"></span>
+                                    <span>Follow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="#">View all recommendations</a>
+                    </div>
                 </div>
-                <h4>Daha fazla göster</h4>
-            </div>
-
-            <!--RIGHT SIDE FOOT-->
-            <div class="right-side-foot">
-                <div>Hizmet Şartları</div>
-                <div>Gizlilik Politikası</div>
-                <div>Çerez Politikası</div>
-                <div>Imprint</div>
-                <div>Erişilebilirlik</div>
-                <div>Reklam Bilgisi</div>
-                <div>Daha Fazla...</div>
-                <div>@2023 X Corp.</di>
-            </div>
+                <div id="linkedin-section">
+                    <section>
+                        <small>Ad</small>
+                        <a href="#">
+                            <span
+                                >Maurício, unlock your full potential with
+                                Linkedin Premium</span
+                            >
+                            <div>
+                                <img src="/images/picture.jpeg" alt="" />
+                                <img
+                                    id="linkedin-key"
+                                    src="/images/linkedin-ad.png"
+                                    alt=""
+                                />
+                            </div>
+                            <strong>
+                                See who's viewed your profile in the last 90
+                                days
+                            </strong>
+                            <div>
+                                <button>Try for free</button>
+                            </div>
+                        </a>
+                    </section>
+                    <footer>
+                        <ul>
+                            <li>About</li>
+                            <li>Help Center</li>
+                            <li>
+                                Privacy & Terms<span
+                                    class="fas fa-angle-down"
+                                ></span>
+                            </li>
+                            <li>Advertising</li>
+                            <li>
+                                Business Services
+                                <span class="fas fa-angle-down"></span>
+                            </li>
+                            <li>Get the LinkedIn app</li>
+                            <li>More</li>
+                        </ul>
+                        <div>
+                            <strong>Linked<span>in</span></strong>
+                            <span>LinkedIn Corporation © 2019</span>
+                        </div>
+                    </footer>
+                </div>
+            </aside>
         </div>
-    </div>
-
-    <!--CONTENT-->
-    <div class="content">
-        <div class="tweet">
-            <img src="/Photos/human-1.jpg" alt="#" id="pp">
-            <div class="tweet-id">
-                <span><b>F1 Lover</b></span>
-                <span>@lover_f1</span>
-                <span>12 Agu</span>
-            </div>
-            <div id="tweet-text">Efsaneyi hatırlatmak isterim.</div>
-            <img src="/Photos/SVG/more-horizontal-svgrepo-com.svg" alt="#" id="tweet-more">
-            <!--POST IMAGE / VIDEO-->
-            <div class="post">
-                <img src="/Photos/rally-cars/rally-1.jpg" alt="#">
-            </div>
-            <!--BUTTONS-->
-            <div class="tweet-buttons">
-                <img src="/Photos/SVG/comment-5-svgrepo-com.svg" alt="#"> <span>36</span>
-
-                <img src="/Photos/SVG/retweet-svgrepo-com.svg" alt="#"> <span>14</span>
-
-                <img src="/Photos/SVG/love-svgrepo-com.svg" alt="#"> <span>143</span>
-
-                <img src="/Photos/SVG/statistics-svgrepo-com.svg" alt="#"> <span>1,3B</span>
-
-                <img src="/Photos/SVG/share-2-svgrepo-com.svg" alt="#">
-            </div>
-
-            <hr>
-        </div>
-
-        <!--TWEET 2-->
-        <div class="tweet">
-            <img src="/Photos/human-2.jpg" alt="#" id="pp">
-            <div class="tweet-id">
-                <span><b>Eric Clark</b></span>
-                <span>@clark_kent</span>
-                <span>10 Agu</span>
-            </div>
-            <div id="tweet-text">Bu sahneyi her izlediğimde tüylerim diken diken oluyor...</div>
-            <img src="/Photos/SVG/more-horizontal-svgrepo-com.svg" alt="#" id="tweet-more">
-            <!--POST IMAGE / VIDEO-->
-            <div class="post">
-                <video src="/Videos/video-4.mp4" autoplay muted loop playsinline controls></video>
-            </div>
-            <!--BUTTONS-->
-            <div class="tweet-buttons">
-                <img src="/Photos/SVG/comment-5-svgrepo-com.svg" alt="#"> <span>82</span>
-
-                <img src="/Photos/SVG/retweet-svgrepo-com.svg" alt="#"> <span>25</span>
-
-                <img src="/Photos/SVG/love-svgrepo-com.svg" alt="#"> <span>437</span>
-
-                <img src="/Photos/SVG/statistics-svgrepo-com.svg" alt="#"> <span>1.7B</span>
-
-                <img src="/Photos/SVG/share-2-svgrepo-com.svg" alt="#">
-            </div>
-
-            <hr>
-        </div>
-
-        <!--TWEET 3-->
-        <div class="tweet">
-            <img src="/Photos/human-3.jpg" alt="#" id="pp">
-            <div class="tweet-id">
-                <span><b>Bad Driver</b></span>
-                <span>@sir_bentley</span>
-                <span>12 Agu</span>
-            </div>
-            <div id="tweet-text">Ön kanadı kesinlikle ciddi hasar gördü.</div>
-            <img src="/Photos/SVG/more-horizontal-svgrepo-com.svg" alt="#" id="tweet-more">
-            <!--POST IMAGE / VIDEO-->
-            <div class="post">
-                <video src="/Videos/video-2.mp4" autoplay muted loop playsinline controls></video>
-            </div>
-            <!--BUTTONS-->
-            <div class="tweet-buttons">
-                <img src="/Photos/SVG/comment-5-svgrepo-com.svg" alt="#"> <span>42</span>
-
-                <img src="/Photos/SVG/retweet-svgrepo-com.svg" alt="#"> <span>55</span>
-
-                <img src="/Photos/SVG/love-svgrepo-com.svg" alt="#"> <span>513</span>
-
-                <img src="/Photos/SVG/statistics-svgrepo-com.svg" alt="#"> <span>3.3B</span>
-
-                <img src="/Photos/SVG/share-2-svgrepo-com.svg" alt="#">
-            </div>
-
-            <hr>
-        </div>
-
-        <!--TWEET 4-->
-        <div class="tweet">
-            <img src="/Photos/human-1.jpg" alt="#" id="pp">
-            <div class="tweet-id">
-                <span><b>F1 Lover</b></span>
-                <span>@lover_f1</span>
-                <span>12 Agu</span>
-            </div>
-            <div id="tweet-text"> <br>8. viraja girişini gördünüz mü?.</div>
-            <img src="/Photos/SVG/more-horizontal-svgrepo-com.svg" alt="#" id="tweet-more">
-
-            <!--BUTTONS-->
-            <div class="tweet-buttons">
-                <img src="/Photos/SVG/comment-5-svgrepo-com.svg" alt="#"> <span>36</span>
-
-                <img src="/Photos/SVG/retweet-svgrepo-com.svg" alt="#"> <span>14</span>
-
-                <img src="/Photos/SVG/love-svgrepo-com.svg" alt="#"> <span>143</span>
-
-                <img src="/Photos/SVG/statistics-svgrepo-com.svg" alt="#"> <span>1,3B</span>
-
-                <img src="/Photos/SVG/share-2-svgrepo-com.svg" alt="#">
-            </div>
-
-            <hr>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
