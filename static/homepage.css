@@ -652,51 +652,43 @@ main#main-section div#share-box {
     flex-direction: column;
 }
 
-main#main-section div#share-box div#button-box {
+#button-box {
     display: flex;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-main#main-section div#share-box div#button-box .fas {
+#button-box .fas {
     font-size: 18px;
 }
 
-main#main-section div#share-box div#button-box button {
+#button-box button {
     background: #fff;
     border: 0;
     color: #696c6f;
     border-right: 1px solid rgba(0, 0, 0, 0.15);
-    padding: 26px 26.5px;
+    padding: 10px; /* Adjusted padding */
     cursor: pointer;
 }
 
-main#main-section div#share-box div#button-box button#btn-post {
+#btn-post {
     width: 100%;
     text-align: left;
-    padding: 26px 17px;
+    padding: 10px 17px; /* Adjusted padding */
 }
 
-main#main-section div#share-box div#button-box button#btn-post:hover {
-    color: #0073b1;
-}
-
-main#main-section
-    div#share-box
-    div#button-box
-    button#btn-post:hover
-    span#btn-text {
+#btn-post:hover span#btn-text {
     text-decoration: underline;
 }
 
-main#main-section div#share-box div#button-box button#btn-post span#btn-text {
+#btn-text {
     font-size: 16px;
     font-weight: bold;
     padding-left: 6px;
 }
 
-main#main-section div#share-box div#button-box button#btn-document {
+#btn-document {
     border-right: 0;
-    padding: 26px 30px;
+    padding: 10px 30px; /* Adjusted padding */
 }
 
 main#main-section div#share-box div#button-box button#btn-picture:hover,
@@ -1466,3 +1458,27 @@ div#dot-loader {
     border: 0 !important;
     background: transparent !important;
 }
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 20px;
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    text-align: center;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  

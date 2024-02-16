@@ -271,29 +271,30 @@
                 </aside>
             </div>
             <!-- MAIN -->
-            <div id="main-wrapper">
-                <main id="main-section">
-                    <div id="share-box">
-                        <div id="button-box">
-                            <button id="btn-post">
-                                <span class="fas fa-edit"></span>
-                                <span id="btn-text">Start a post</span>
-                            </button>
+                <div id="main-wrapper">
+                    <main id="main-section">
+                        <div id="share-box">
+                        <form method="post" action="/post">
+                            <div id="button-box">
                             <button id="btn-picture">
-                                <span class="fas fa-camera"></span>
-                            </button>
-                            <button id="btn-video">
-                                <span class="fas fa-video"></span>
-                            </button>
-                            <button id="btn-document">
-                                <span class="fas fa-file"></span>
-                            </button>
+                                    <span class="fas fa-camera"></span>
+                                </button>
+                                <button id="btn-video">
+                                    <span class="fas fa-video"></span>
+                                </button>
+                                <textarea id="btn-post" placeholder="Start a post" name="Description"></textarea>
+                                <input id="btn-post" name="Image" placeholder="Image Url"
+                                <button id="btn-document" type="submit">
+                                    <span class="fa fa-paper-plane"></span>
+                                </button>
+                            </div>
+                        </form>
+
+                            <div id="link-box">
+                                <a href="#">Write an article</a>
+                                <span>on LinkedIn</span>
+                            </div>
                         </div>
-                        <div id="link-box">
-                            <a href="#">Write an article</a>
-                            <span>on LinkedIn</span>
-                        </div>
-                    </div>
                     <div id="feed-sort">
                         <hr />
                         <button>
@@ -302,6 +303,7 @@
                             <span class="fas fa-sort-down"></span>
                         </button>
                     </div>
+                    <br>
                     <article>
                         {% for post in Posts %}
                             <div id="post-author">
@@ -341,7 +343,7 @@
                                 <div id="interactions-amount">
                                     <span id="like-icon" class="fas fa-thumbs-up fa-flip-horizontal"></span>
                                     <span id="heart-icon" class="fas fa-heart"></span>
-                                    <span id="amount-info">{{ post.Like }} <span>&nbsp;·&nbsp;</span> 4 Comments</span>
+                                    <span id="amount-info">{{ post.Likes }} Likes <span>&nbsp;·&nbsp;</span> {{post.Comments}} Comments</span>
                                 </div>
                                 <div id="interactions-btns">
                                     <button>
@@ -358,63 +360,9 @@
                                     </button>
                                 </div>
                             </div>
+                            {% endfor %}
+                            <br>
                     </article>
-                    <article>
-                            <div id="post-author">
-                                <a href="#">
-                                    <div>
-                                        
-                                            <img src="" alt="" />
-                                        
-                                        <div>
-                                            <div>
-                                                <strong id="post-author-name">{{ post.User_ID }}</strong>
-                                                <span><span>&nbsp;·&nbsp;</span>1st</span>
-                                            </div>
-                                            <span>Web Developer at Muse Software</span>
-                                            <span>{{ post.Timestamp }}</span>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div>
-                                    <span class="fas fa-circle"></span>
-                                    <span class="fas fa-circle"></span>
-                                    <span class="fas fa-circle"></span>
-                                </div>
-                            </div>
-
-                            <div id="post-data">
-                                <p>{{ post.Description }}</p>
-                                <p id="post-translation">
-                                    <button>See translation</button>
-                                </p>
-                                <img src="{{ post.Image }}" alt="" />
-                            </div>
-
-                            <div id="post-interactions">
-                                <div id="interactions-amount">
-                                    <span id="like-icon" class="fas fa-thumbs-up fa-flip-horizontal"></span>
-                                    <span id="heart-icon" class="fas fa-heart"></span>
-                                    <span id="amount-info">{{ post.Like }} <span>&nbsp;·&nbsp;</span> 4 Comments</span>
-                                </div>
-                                <div id="interactions-btns">
-                                    <button>
-                                        <span class="far fa-thumbs-up fa-flip-horizontal"></span>
-                                        <span>Like</span>
-                                    </button>
-                                    <button>
-                                        <span class="far fa-comment-dots fa-flip-horizontal"></span>
-                                        <span>Comment</span>
-                                    </button>
-                                    <button>
-                                        <span class="far fa-share-square"></span>
-                                        <span>Share</span>
-                                    </button>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </article>
-                    <article>
                         <div id="post-author">
                             <a href="#">
                                 <div>

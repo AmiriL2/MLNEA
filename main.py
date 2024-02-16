@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, g
 import flask_login
 import pymysql
 import pymysql.cursors
@@ -20,29 +20,40 @@ class User:
 
     def __init__(self, ID, username, email, profilepic):
         self.username = username
-        self.ID = ID
+        self.id = ID
         self.email = email
         self.profilepic = profilepic
 
     def get_id(self):
         return str(self.ID)
 
-    
-connect = pymysql.connect(
-    host='10.100.33.60',
-    user='alayne',
-    password='228043303',
-    database= 'alayne_socialmedia',
-    cursorclass=pymysql.cursors.DictCursor
-)
+def connect_db():
+    return pymysql.connect(
+        host='10.100.33.60',
+        user='alayne',
+        password='228043303',
+        database= 'alayne_socialmedia',
+        cursorclass=pymysql.cursors.DictCursor,
+        autocommit=True
+    )
+
+def get_db():    
+        if not hasattr(g, 'db'):
+            g.db = connect_db()
+        return g.db    
+
+@app.teardown_appcontext
+def close_db(error):
+        if hasattr(g, 'db'):
+            g.db.close() 
 
 @login_manager.user_loader
 def load_user(user_id):
-    Cursor = connect.cursor()
+    Cursor = get_db().cursor()
     Cursor.execute(f"SELECT * FROM `Users` WHERE `ID` = " + str(user_id))
     result = Cursor.fetchone()
     Cursor.close()
-    connect.commit()
+    get_db().commit()
 
     if result is None:
         return None
@@ -54,11 +65,11 @@ def index():
         return redirect('/feedpage')
     return render_template("home.html.jinja")
 
-@app.route('/feedpage')
+@app.route('/feedpage', methods=['GET', 'POST'])
 @flask_login.login_required
 def homepage():
-    cursor = connect.cursor()
-    sql = "SELECT * FROM `Posts` JOIN `Users` on Posts.User_ID = User_ID ORDER BY `Timestamp` "
+    cursor = get_db().cursor()
+    sql = "SELECT * FROM `Posts` JOIN `Users` ON Posts.User_ID = `Users`.ID ORDER BY `Timestamp` "
     cursor.execute(sql)
     posts = cursor.fetchall()
     cursor.close()
@@ -75,10 +86,10 @@ def signup():
         email = request.form['email']
         password = request.form['password']
 
-        Cursor = connect.cursor()
+        Cursor = get_db().cursor()
         Cursor.execute(f"INSERT INTO `Users` (`First_Name`, `email`, `phone`, `password`, `username`) VALUES ('{fname}','{email}','{phonenumber}','{password}','{username}')")
         Cursor.close()
-        connect.commit()
+        get_db().commit()
         return redirect('/login')
     
     if flask_login.current_user.is_authenticated:
@@ -90,7 +101,7 @@ def login():
         if request.method == 'POST':
             username = request.form['username']
             password = request.form['password']
-            Cursor = connect.cursor()
+            Cursor = get_db().cursor()
             Cursor.execute(f"SELECT * FROM `Users` WHERE username='{username}'")
             result = Cursor.fetchone()
             
@@ -103,3 +114,19 @@ def login():
             return redirect('/feedpage')
 
         return render_template("sign-in-page.html.jinja")
+
+@app.route('/post', methods=['POST', 'GET'])
+@flask_login.login_required
+def user_post():
+    description = request.form['Description']
+    Image = request.form['Image']
+    User_ID = flask_login.current_user.id
+    Cursor = get_db().cursor()
+    Cursor.execute("INSERT INTO `Posts` (`User_ID`, `Description`, `Image`, `Timestamp`) VALUES (%s, %s,  %s, NOW())", (User_ID, description, Image))
+    Cursor.close()
+    get_db().commit()
+    return redirect('/feedpage')
+
+@app.route('/profile')
+def profile():
+    return render_template("profile.html.jinja")
