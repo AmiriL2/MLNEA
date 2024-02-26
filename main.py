@@ -69,7 +69,7 @@ def index():
 @flask_login.login_required
 def homepage():
     cursor = get_db().cursor()
-    sql = "SELECT * FROM `Posts` JOIN `Users` ON Posts.User_ID = `Users`.ID ORDER BY `Timestamp` "
+    sql = "SELECT * FROM `Posts` JOIN `Users` ON Posts.User_ID = `Users`.ID ORDER BY `Timestamp` DESC"
     cursor.execute(sql)
     posts = cursor.fetchall()
     cursor.close()
