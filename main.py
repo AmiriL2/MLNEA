@@ -25,7 +25,7 @@ class User:
         self.profilepic = profilepic
 
     def get_id(self):
-        return str(self.ID)
+        return str(self.id)
 
 def connect_db():
     return pymysql.connect(
